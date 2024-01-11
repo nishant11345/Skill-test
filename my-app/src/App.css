@@ -1,0 +1,216 @@
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+ 
+  padding: 20px;
+  color: white;
+}
+
+.events-container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.show-events-dropdown {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.show-events-dropdown button {
+  background-color: #61dafb;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.options-dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+  display: none;
+}
+
+.show-events-dropdown:hover .options-dropdown {
+  display: flex;
+}
+
+.options-dropdown div {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.options-dropdown div:hover {
+  background-color: #f1f1f1;
+}
+
+.event {
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.event:hover {
+  background-color: #f9f9f9;
+  transform: scale(1.02);
+}
+
+.event-details {
+  background-color: #fff;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease;
+}
+
+.event-details button {
+  background-color: #61dafb;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.show-events-dropdown {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.show-events-dropdown button {
+  background-color: #61dafb;
+  color: white;
+  font-size: 16px;
+  padding: 15px 30px; 
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.options-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  height: 0;
+}
+
+.show-events-dropdown:hover .options-dropdown {
+  height: auto;
+}
+
+.options-dropdown div {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.options-dropdown div:hover {
+  background-color: #f1f1f1;
+}
+
+.react-datepicker-wrapper input {
+  width: 200px; 
+  padding: 8px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  margin-right: 10px; 
+}
+
+.filterbutton{
+  background-color: #4CAF50; 
+  color: white; 
+  border: 1px solid #4CAF50; 
+  border-radius: 5px; 
+  padding: 8px 12px; 
+  cursor: pointer;
+  font-family: 'Arial', sans-serif; 
+  font-size: 16px; 
+  transition: background-color 0.3s, color 0.3s; 
+
+
+}
+.filterbutton:hover{
+  background-color: #116d15; 
+  color: #fff; 
+}
+
+
+
+
+
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.5; 
+  animation: imageSlider 6s infinite; 
+}
+
+@keyframes imageSlider {
+  0%, 100% {
+    background-image: url('maxresdefault.jpg');
+  }
+  33% {
+    background-image: url('Vrindavan_Chandrodaya_Temple_Render_-_Front_View_02.jpg');
+  }
+  66% {
+    background-image: url('DDl_7.jpg');
+  }
+}
+@media only screen and (max-width: 600px) {
+  .events-container {
+    padding: 0 10px; 
+  }
+
+  .event, .event-details {
+    margin: 10px 0; 
+  }
+}
